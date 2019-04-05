@@ -9,9 +9,9 @@ Created on Fri Mar 15 09:39:45 2019
 import tensorflow as tf
 import numpy as np
 
-Mass = tf.Variable(np.load('/home/dhanunjaya/Downloads/q2_input/masses.npy'),dtype=tf.float32)
-Position = tf.Variable(np.load('/home/dhanunjaya/Downloads/q2_input/positions.npy'),dtype=tf.float32)
-Velocity = tf.Variable(np.load('/home/dhanunjaya/Downloads/q2_input/velocities.npy'),dtype=tf.float32)
+Mass = tf.Variable(np.load('./q2_input/masses.npy'),dtype=tf.float32)
+Position = tf.Variable(np.load('./q2_input/positions.npy'),dtype=tf.float32)
+Velocity = tf.Variable(np.load('./q2_input/velocities.npy'),dtype=tf.float32)
 num_size = 100
 switch = tf.Variable(0)
 Gravity = tf.Variable(6.67 * (10 ** 5))

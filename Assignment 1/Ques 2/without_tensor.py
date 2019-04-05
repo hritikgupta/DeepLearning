@@ -62,7 +62,7 @@ def update_system(mas, pos, vec):
         print("number of iterations :", counter)
     return updated_pos, updated_vec
 
-mas = np.load('/home/dhanunjaya/Downloads/q2_input/masses.npy')
-pos = np.load('/home/dhanunjaya/Downloads/q2_input/positions.npy')
-vec = np.load('/home/dhanunjaya/Downloads/q2_input/velocities.npy')
+mas = np.load('./q2_input/masses.npy')
+pos = np.load('./q2_input/positions.npy')
+vec = np.load('./q2_input/velocities.npy')
 updated_pos, updated_vec = update_system(mas, pos, vec) 
