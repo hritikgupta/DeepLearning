@@ -29,8 +29,6 @@ def FC(input1, nn, activation, use_bias, islast):
         elif activation == 'relu':
             return tf.nn.relu(y)    
     
-
-
 epochs = 5
 step = 100
 batch = 100
@@ -82,6 +80,9 @@ with tf.Session() as sess:
             test_acc.append(acc_tst)
 
         sess.run(train_step, feed_dict={X: batch_X, Y_: batch_Y})
+
+    save_path = saver.save(sess, "model_mnist.ckpt")
+
 # confusion = confusion_matrix(mnist.test.labels, np.argmax(test_predictions,axis=1))        
 title = "Loss Plots"
 vis.losses_accuracies_plots(train_losses,train_acc,test_losses, test_acc,title,step	)
